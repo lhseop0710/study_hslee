@@ -50,27 +50,27 @@
 // }
 
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// int main(void)
-// {
-//   int weight, height, BMI
+int main(void)
+{
+  int weight, height;
+  double BMI;
 
-//   printf("몸무게 :    \n");   scanf("%d", &weight); #몸무게를 입력
-//   prinrf("키:        \n");   scanf("%d", &height); #키를 입력
+  printf("몸무게 :    \n");   scanf("%d", &weight); //몸무게를 입력
+  printf("키:        \n");   scanf("%d", &height); //키를 입력
 
-//   height = height / 100;                       #아랫줄까지 BMI지수 계산
-// 	 BMI = weight / (height * height);
-
-//   printf("당신의 BMI는 %.1f입니다.\n", bmi);
+                      //아랫줄까지 BMI지수 계산
+  BMI = weight / (height/100.0 * height/100.0);
+  printf("당신의 BMI는 %f입니다.\n", BMI);
   
 
-//     if (BMI > 19 || 26 < BMI)   #if문 20~25사이만 정상으로 출력
-//       prinf("정상입니다.");
-//     else
-//       printf("체중관리가 필요합니다.");
+    if (BMI >=18.5 && BMI<=24.9)   //if문 20~25사이만 정상으로 출력
+      printf("정상입니다.");
+    else
+      printf("체중관리가 필요합니다.");
 
-//   getchar();
-//   return 0;
 
-// }
+  return 0;
+
+}
